@@ -14,7 +14,7 @@ export const JWT_SECRET = process.env.JWT_SECRET || 'clave_secreta';
 
 try {
   await pool.query("SELECT NOW()");
-  console.log("database conectada");
+  console.log("Database conectada");
 } catch (error) {
   console.log(error);
 }

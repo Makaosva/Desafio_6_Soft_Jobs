@@ -9,6 +9,7 @@ export const authMiddleware = (req, res, next) => {
   try {
     const payload = jwt.verify(token, process.env.JWT_SECRET);
     req.user = payload;
+    
     next();
   } catch (error) {
     console.log(error);

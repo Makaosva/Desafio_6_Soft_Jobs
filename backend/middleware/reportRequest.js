@@ -3,7 +3,6 @@ export const tracker = async (req, _, next) => {
   const url = req.url;
   const queryParams = req.query;
   const routeParams = req.params;
-  const headers = req.headers;
   const body = req.body;
 
   console.log(
@@ -12,7 +11,6 @@ export const tracker = async (req, _, next) => {
     Metodo: ${method}
     Parametros de consulta (query): ${JSON.stringify(queryParams)}
     Parametros de ruta (params): ${JSON.stringify(routeParams)}
-    Encabezados: ${JSON.stringify(headers)}
     Cuerpo: ${JSON.stringify(body)}\n`
   );
   next();
